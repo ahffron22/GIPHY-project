@@ -2,6 +2,7 @@ body {
   background-image: url(images/topography.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: auto;
 }
 header {
@@ -14,4 +15,39 @@ header {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding-top: 10px;
   margin-bottom: 100px;
+}
+#gif-form {
+  background-image: url(images/header.png);
+  text-align: center;
+}
+#gifText {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#gif-input {
+  width: 300px;
+}
+#add-gif {
+  width: 100px;
+}
+img {
+  width: 275px;
+  height: 275px;
+  float: left;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  float: left;
+  margin: 10px;
+}
+button {
+  background-image: url(images/header.png);
+  color: white;
+  width: 100px;
+  height: 25px;
 }

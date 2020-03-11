@@ -1,5 +1,21 @@
 $(document).ready(function() {
-  var gifs = ["lion", "Tiger", "bear", "cow", "bird"];
+  var gifs = [
+    "lion",
+    "Tiger",
+    "bear",
+    "cow",
+    "bird",
+    "dinosaur",
+    "cat",
+    "dog",
+    "fish",
+    "shark",
+    "whale",
+    "pig",
+    "sheep",
+    "goat",
+    "puma"
+  ];
 
   // gifDisplay function re-renders the HTML to display the appropriate content
   function gifDisplay() {
@@ -8,7 +24,7 @@ $(document).ready(function() {
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       gif +
-      "&limit=5&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+      "&limit=10&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
     // Creating an AJAX call for the specific gif button being clicked
     $.ajax({
       url: queryURL,
@@ -17,11 +33,13 @@ $(document).ready(function() {
       console.log(response.data[0]);
       var results = response.data;
       for (var i = 0; i < results.length; i++) {
+        var gifRating = $("<p>").text("rating: g");
         var img = $("<img>").attr(
           "src",
           results[i].images.fixed_height_still.url
         );
         $("#gifs-view").prepend(img);
+        $("#gifs-view").prepend(gifRating);
       }
     });
   }
